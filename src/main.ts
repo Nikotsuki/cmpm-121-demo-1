@@ -5,7 +5,7 @@ const counter: HTMLDivElement = document.querySelector("#counter")!;
 
 let count: number = 0;
 
-function increase(){
+function increase() {
   count += 1;
 }
 
