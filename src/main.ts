@@ -5,7 +5,7 @@ const counter: HTMLDivElement = document.querySelector("#counter")!;
 
 let count: number = 0;
 
-counter.innerHTML = count + "cookies";
+counter.innerHTML = count + " cookies";
 
 const gameName = "My amazing emoji clicker game";
 document.title = gameName;
