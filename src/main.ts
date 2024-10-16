@@ -35,7 +35,6 @@ purchase.addEventListener("click", () => {
   growth += 1;
 });
 
-
 setInterval(increase, 1000);
 console.log(count);
 
