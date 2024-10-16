@@ -37,6 +37,7 @@ while (count >= 10) {
 
 purchase.addEventListener("click", () => {
   growth += 1;
+  count -= 10;
 });
 
 setInterval(increase, 1000);
