@@ -2,8 +2,8 @@ import "./style.css";
 
 const app: HTMLDivElement = document.querySelector("#app")!;
 const counter: HTMLDivElement = document.querySelector("#counter")!;
-const purchase: HTMLSelectElement = document.querySelector("#purchase")!;
-const button: HTMLSelectElement = document.querySelector("#button")!;
+const purchase: HTMLButtonElement = document.querySelector("#purchase")!;
+const button: HTMLButtonElement = document.querySelector("#button")!;
 
 let count: number = 0;
 let growth: number = 0;
