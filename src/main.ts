@@ -24,7 +24,7 @@ document.body.appendChild(button);
 purchase.textContent = "Increase Growth Rate";
 document.body.appendChild(purchase);
 
-while (count < 10){
+while (count < 10) {
   purchase.disabled = true;
 }
 
