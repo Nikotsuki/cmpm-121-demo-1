@@ -24,6 +24,8 @@ button.addEventListener("click", () => {
   counter.innerHTML = count + " flan";
 });
 
+setInterval(increase, 1000);
+
 const header = document.createElement("h1");
 header.innerHTML = gameName;
 app.append(header);
