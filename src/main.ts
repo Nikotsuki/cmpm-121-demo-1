@@ -34,12 +34,12 @@ purchase.addEventListener("click", () => {
 });
 
 button.addEventListener("click", () => {
-  console.log(count);
   count += 1;
   counter.innerHTML = count + " flan";
 });
 
 setInterval(increase, 1000);
+console.log(count);
 
 //requestAnimationFrame();
 
