@@ -15,8 +15,8 @@ button.textContent = "🍮";
 document.body.appendChild(button);
 
 button.addEventListener("click", () => {
-    console.log("hi");
-    count += 1;
+  console.log("hi");
+  count += 1;
 });
 
 const header = document.createElement("h1");
