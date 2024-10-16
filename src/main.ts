@@ -3,7 +3,7 @@ import "./style.css";
 const app: HTMLDivElement = document.querySelector("#app")!;
 const counter: HTMLDivElement = document.querySelector("#counter")!;
 const purchase: HTMLButtonElement = document.querySelector("#purchase")!;
-const button: HTMLButtonElement = document.querySelector("#button")!;
+//const button: HTMLButtonElement = document.querySelector("#button")!;
 
 let count: number = 0;
 let growth: number = 0;
@@ -17,6 +17,10 @@ counter.innerHTML = count + " flan";
 
 const gameName = "Flan";
 document.title = gameName;
+
+const button = document.createElement("button");
+button.textContent = "🍮";
+document.body.appendChild(button);
 
 button.addEventListener("click", () => {
   count += 1;
