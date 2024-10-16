@@ -31,9 +31,9 @@ button.addEventListener("click", () => {
 ///purchase.textContent = "Increase Growth Rate";
 //document.body.appendChild(purchase);
 
-//while (count >= 10) {
-//  purchase.disabled = false;
-//}
+while (count >= 10) {
+  purchase.disabled = false;
+}
 
 purchase.addEventListener("click", () => {
   growth += 1;
