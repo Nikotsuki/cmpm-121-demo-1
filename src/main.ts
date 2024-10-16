@@ -17,6 +17,7 @@ document.body.appendChild(button);
 button.addEventListener("click", () => {
   console.log("hi");
   count += 1;
+  counter.innerHTML = count + " cookies";
 });
 
 const header = document.createElement("h1");
