@@ -34,7 +34,7 @@ purchase.addEventListener("click", () => {
 });
 
 button.addEventListener("click", () => {
-  console.log("ji");
+  console.log(count);
   count += 1;
   counter.innerHTML = count + " flan";
 });
