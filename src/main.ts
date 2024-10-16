@@ -2,11 +2,13 @@ import "./style.css";
 
 const app: HTMLDivElement = document.querySelector("#app")!;
 const counter: HTMLDivElement = document.querySelector("#counter")!;
+const purchase: HTMLSelectElement = document.querySelector("#purchase-select")!;
 
 let count: number = 0;
+let growth: number = 0;
 
 function increase() {
-  count += 1;
+  count += growth;
   counter.innerHTML = count + " flan";
 }
 
@@ -19,13 +21,25 @@ const button = document.createElement("button");
 button.textContent = "🍮";
 document.body.appendChild(button);
 
+purchase.textContent = "Increase Growth Rate";
+document.body.appendChild(purchase);
+
+while (count < 10){
+  purchase.disabled = true;
+}
+
+purchase.addEventListener("click", () => {
+  growth += 1;
+});
+
 button.addEventListener("click", () => {
-  console.log("hi");
   increase();
   counter.innerHTML = count + " flan";
 });
 
 setInterval(increase, 1000);
+
+//requestAnimationFrame();
 
 const header = document.createElement("h1");
 header.innerHTML = gameName;
