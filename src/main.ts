@@ -2,7 +2,7 @@ import "./style.css";
 
 const app: HTMLDivElement = document.querySelector("#app")!;
 const counter: HTMLDivElement = document.querySelector("#counter")!;
-const purchase: HTMLSelectElement = document.querySelector("#purchase-select")!;
+//onst purchase: HTMLSelectElement = document.querySelector("#purchase-select")!;
 
 let count: number = 0;
 let growth: number = 0;
@@ -21,6 +21,7 @@ const button = document.createElement("button");
 button.textContent = "🍮";
 document.body.appendChild(button);
 
+const purchase = document.createElement("button");
 purchase.textContent = "Increase Growth Rate";
 document.body.appendChild(purchase);
 
