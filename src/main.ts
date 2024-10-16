@@ -5,6 +5,10 @@ const counter: HTMLDivElement = document.querySelector("#counter")!;
 
 let count: number = 0;
 
+function increase(){
+  count += 1;
+}
+
 counter.innerHTML = count + " cookies";
 
 const gameName = "My amazing emoji clicker game";
@@ -16,9 +20,11 @@ document.body.appendChild(button);
 
 button.addEventListener("click", () => {
   console.log("hi");
-  count += 1;
+  increase();
   counter.innerHTML = count + " cookies";
 });
+
+setInterval(increase, 1000);
 
 const header = document.createElement("h1");
 header.innerHTML = gameName;
