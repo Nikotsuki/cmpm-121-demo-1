@@ -2,14 +2,14 @@ import "./style.css";
 
 const app: HTMLDivElement = document.querySelector("#app")!;
 const counter: HTMLDivElement = document.querySelector("#counter")!;
-//const purchase: HTMLButtonElement = document.querySelector("#purchase")!;
+const purchase: HTMLButtonElement = document.querySelector("#purchase")!;
 const button: HTMLButtonElement = document.querySelector("#button")!;
 
 let count: number = 0;
-//let growth: number = 0;
+let growth: number = 0;
 
 function increase() {
-  count += 1;
+  count += growth;
   counter.innerHTML = count + " flan";
 }
 
@@ -19,7 +19,7 @@ const gameName = "Flan";
 document.title = gameName;
 
 button.addEventListener("click", () => {
-  increase();
+  count += 1;
   counter.innerHTML = count + " flan";
 });
 
@@ -31,9 +31,9 @@ button.addEventListener("click", () => {
 //  purchase.disabled = false;
 //}
 
-//purchase.addEventListener("click", () => {
-//  growth += 1;
-//});
+purchase.addEventListener("click", () => {
+  growth += 1;
+});
 
 setInterval(increase, 1000);
 console.log(count);
