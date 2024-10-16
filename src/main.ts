@@ -3,6 +3,7 @@ import "./style.css";
 const app: HTMLDivElement = document.querySelector("#app")!;
 const counter: HTMLDivElement = document.querySelector("#counter")!;
 const purchase: HTMLSelectElement = document.querySelector("#purchase")!;
+const button: HTMLSelectElement = document.querySelector("#button")!;
 
 let count: number = 0;
 let growth: number = 0;
@@ -17,9 +18,10 @@ counter.innerHTML = count + " flan";
 const gameName = "Flan";
 document.title = gameName;
 
-const button = document.createElement("button");
-button.textContent = "🍮";
-document.body.appendChild(button);
+button.addEventListener("click", () => {
+  count += 1;
+  counter.innerHTML = count + " flan";
+});
 
 //const purchase = document.createElementById("purchase");
 ///purchase.textContent = "Increase Growth Rate";
@@ -33,10 +35,6 @@ purchase.addEventListener("click", () => {
   growth += 1;
 });
 
-button.addEventListener("click", () => {
-  count += 1;
-  counter.innerHTML = count + " flan";
-});
 
 setInterval(increase, 1000);
 console.log(count);
