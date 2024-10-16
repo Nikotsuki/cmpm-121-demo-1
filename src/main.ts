@@ -2,11 +2,11 @@ import "./style.css";
 
 const app: HTMLDivElement = document.querySelector("#app")!;
 
-const gameName = "My amazing emoji clikcer game";
+const gameName = "My amazing emoji clicker game";
 document.title = gameName;
 
-const button = document.createElement("button");
-button.textContent = "Click isi";
+const button = document.createElement("🍮");
+//button.textContent = "Click isi";
 document.body.appendChild(button);
 
 const header = document.createElement("h1");
