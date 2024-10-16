@@ -1,11 +1,9 @@
 import "./style.css";
 
-
 const app: HTMLDivElement = document.querySelector("#app")!;
 const counter: HTMLDivElement = document.querySelector("#counter")!;
 
 let count: number = 0;
-
 
 //const display = document.createElement("counter");
 counter.innerHTML = count + "cookies";
@@ -18,9 +16,8 @@ button.textContent = "🍮";
 document.body.appendChild(button);
 
 button.addEventListener("click", () => {
-    count += 1;
+  count += 1;
 });
-
 
 const header = document.createElement("h1");
 header.innerHTML = gameName;
