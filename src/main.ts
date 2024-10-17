@@ -14,7 +14,7 @@ function increase() {
   counter.innerHTML = count + " flan";
 }
 
-const gameName = "Flan";
+const gameName = "Flan Game";
 document.title = gameName;
 
 const button = document.createElement("button");
