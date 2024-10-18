@@ -33,7 +33,7 @@ button.addEventListener("click", () => {
 purchase.addEventListener("click", () => {
   growth += 1;
   count -= 10;
-  if (count < 10){
+  if (count < 10) {
     purchase.disabled = true;
   }
 });
