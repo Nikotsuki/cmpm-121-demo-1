@@ -9,11 +9,13 @@ let growth: number = 0;
 
 counter.innerHTML = count + " flan";
 
-document.addEventListener("change", function () {
-  if (count >= 10) {
+document.addEventListener("change", check_count);
+
+function check_count(){
+  if(count >= 10){
     purchase.disabled = false;
   }
-});
+}
 
 function increase() {
   count += growth;
