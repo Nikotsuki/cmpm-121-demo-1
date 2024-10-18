@@ -21,7 +21,7 @@ counter.innerHTML = count + " flan";
 function increase() {
   count += growth;
   counter.innerHTML = count + " flan";
-  growth_rate.append("Growth Rate: " + growth)
+  growth_rate.append("Growth Rate: " + growth);
   if (count >= 10) {
     purchaseA.disabled = false;
   }
@@ -62,7 +62,7 @@ purchaseA.addEventListener("click", () => {
     purchaseA.disabled = true;
   }
   A_count += 1;
-  Acount.append(("Purchased A: " + A_count));
+  Acount.append("Purchased A: " + A_count);
 });
 purchaseB.addEventListener("click", () => {
   growth += 2.0;
@@ -71,7 +71,7 @@ purchaseB.addEventListener("click", () => {
     purchaseB.disabled = true;
   }
   B_count += 1;
-  Bcount.append(("Purchased B: " + B_count));
+  Bcount.append("Purchased B: " + B_count);
 });
 purchaseC.addEventListener("click", () => {
   growth += 5.0;
