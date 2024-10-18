@@ -62,7 +62,7 @@ purchaseA.addEventListener("click", () => {
   }
   A_count += 1;
   A_cost = A_cost * 1.15;
-  Acount.innerHTML = " Purchased A: " + A_count;
+  Acount.innerHTML = " Purchased Tiny Clickers: " + A_count;
 });
 purchaseB.addEventListener("click", () => {
   growth += 2.0;
@@ -72,7 +72,7 @@ purchaseB.addEventListener("click", () => {
   }
   B_count += 1;
   B_cost = B_cost * 1.15;
-  Bcount.innerHTML = " Purchased B: " + B_count;
+  Bcount.innerHTML = " Purchased Mama's Help: " + B_count;
 });
 purchaseC.addEventListener("click", () => {
   growth += 5.0;
@@ -82,7 +82,7 @@ purchaseC.addEventListener("click", () => {
   }
   C_count += 1;
   C_cost = C_cost * 1.15;
-  Ccount.innerHTML = " Purchased C: " + C_count;
+  Ccount.innerHTML = " Purchased The Spanish Inquisition: " + C_count;
 });
 
 setInterval(increase, 1000);
