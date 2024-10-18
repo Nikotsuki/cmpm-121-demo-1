@@ -50,7 +50,7 @@ for (const item of availableItems) {
   document.getElementById(item.name)?.addEventListener("click", () => {
     growth += item.rate;
     count -= item.cost;
-    if (count >= item.cost) {
+    if (count < item.cost) {
       document.getElementById(item.name)?.setAttribute("disabled", "disabled");
     }
     item.bought += 1;
