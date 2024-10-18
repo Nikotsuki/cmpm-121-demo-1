@@ -12,7 +12,7 @@ counter.innerHTML = count + " flan";
 function increase() {
   count += growth;
   counter.innerHTML = count + " flan";
-  if (count >= 10){
+  if (count >= 10) {
     purchase.disabled = false;
   }
 }
