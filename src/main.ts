@@ -32,6 +32,7 @@ document.body.appendChild(button);
 
 button.addEventListener("click", () => {
   count += 1;
+  console.log("hi");
   counter.innerHTML = count + " flan";
 });
 
