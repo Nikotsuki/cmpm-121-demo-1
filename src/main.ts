@@ -2,88 +2,62 @@ import "./style.css";
 
 const app: HTMLDivElement = document.querySelector("#app")!;
 const counter: HTMLDivElement = document.querySelector("#counter")!;
-const Acount: HTMLLabelElement = document.querySelector("#Acount")!;
-const Bcount: HTMLLabelElement = document.querySelector("#Bcount")!;
-const Ccount: HTMLLabelElement = document.querySelector("#Ccount")!;
 const growth_rate: HTMLLabelElement = document.querySelector("#Growth")!;
 const button: HTMLButtonElement = document.querySelector("#flan")!;
-const purchaseA: HTMLButtonElement = document.querySelector("#purchaseA")!;
-const purchaseB: HTMLButtonElement = document.querySelector("#purchaseB")!;
-const purchaseC: HTMLButtonElement = document.querySelector("#purchaseC")!;
+
+interface Item {
+  name: string,
+  cost: number,
+  rate: number,
+  bought: number
+};
+
+const availableItems : Item[] = [
+  {name: "TinyClicker", cost: 10, rate: 0.1, bought: 0},
+  {name: "MamasHelp", cost: 100, rate: 2, bought: 0},
+  {name: "TheSpanishInquisiton", cost: 1000, rate: 50, bought: 0},
+];
 
 let count: number = 0;
 let growth: number = 0;
-let A_count: number = 0;
-let B_count: number = 0;
-let C_count: number = 0;
-let A_cost: number = 10;
-let B_cost: number = 100;
-let C_cost: number = 1000;
 
+const gameName = "Flan Factory";
+document.title = gameName;
 counter.innerHTML = count + " flan";
 
 function increase() {
   count += growth;
   counter.innerHTML = count + " flan";
   growth_rate.innerHTML = " Growth Rate: " + growth;
-  if (count >= A_cost) {
-    purchaseA.disabled = false;
-  }
-  if (count >= B_cost) {
-    purchaseB.disabled = false;
-  }
-  if (count >= C_cost) {
-    purchaseC.disabled = false;
+  for (const item of availableItems){
+    if (count >= item.cost){
+      document.getElementById(item.name)?.removeAttribute("disabled");
+    }
   }
 }
-
-const gameName = "Flan Factory";
-document.title = gameName;
 
 button.addEventListener("click", () => {
   count += 1;
   counter.innerHTML = count + " flan";
-  if (count >= A_cost) {
-    purchaseA.disabled = false;
-  }
-  if (count >= B_cost) {
-    purchaseB.disabled = false;
-  }
-  if (count >= C_cost) {
-    purchaseC.disabled = false;
+  for (const item of availableItems){
+    if (count >= item.cost){
+      document.getElementById(item.name)?.removeAttribute("disabled");
+    }
   }
 });
 
-purchaseA.addEventListener("click", () => {
-  growth += 0.1;
-  count -= A_cost;
-  if (count < A_cost) {
-    purchaseA.disabled = true;
-  }
-  A_count += 1;
-  A_cost = A_cost * 1.15;
-  Acount.innerHTML = " Purchased Tiny Clickers: " + A_count;
-});
-purchaseB.addEventListener("click", () => {
-  growth += 2.0;
-  count -= B_cost;
-  if (count < B_cost) {
-    purchaseB.disabled = true;
-  }
-  B_count += 1;
-  B_cost = B_cost * 1.15;
-  Bcount.innerHTML = " Purchased Mama's Help: " + B_count;
-});
-purchaseC.addEventListener("click", () => {
-  growth += 5.0;
-  count -= C_cost;
-  if (count < C_cost) {
-    purchaseC.disabled = true;
-  }
-  C_count += 1;
-  C_cost = C_cost * 1.15;
-  Ccount.innerHTML = " Purchased The Spanish Inquisition: " + C_count;
-});
+for (const item of availableItems){
+  document.getElementById(item.name)?.addEventListener("click", () =>{
+    growth += item.rate;
+    count -= item.cost;
+    if (count >= item.cost){
+      document.getElementById(item.name)?.setAttribute("disabled", "disabled");
+    }
+    item.bought += 1;
+    item.cost = item.cost * 1.15;
+    document.getElementById(item.name + "_count")!.innerHTML = " Purchased " + item.name + ": " + item.bought;
+  })
+}
 
 setInterval(increase, 1000);
 
