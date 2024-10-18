@@ -13,6 +13,7 @@ document.addEventListener("change", check_count);
 
 function check_count() {
   if (count >= 10) {
+    console.log("hi");
     purchase.disabled = false;
   }
 }
@@ -22,7 +23,7 @@ function increase() {
   counter.innerHTML = count + " flan";
 }
 
-const gameName = "Flan";
+const gameName = "Flan Game";
 document.title = gameName;
 
 const button = document.createElement("button");
