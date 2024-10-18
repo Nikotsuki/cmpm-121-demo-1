@@ -25,13 +25,13 @@ function increase() {
   count += growth;
   counter.innerHTML = count + " flan";
   growth_rate.innerHTML = " Growth Rate: " + growth;
-  if (count >= 10) {
+  if (count >= A_cost) {
     purchaseA.disabled = false;
   }
-  if (count >= 100) {
+  if (count >= B_cost) {
     purchaseB.disabled = false;
   }
-  if (count >= 1000) {
+  if (count >= C_cost) {
     purchaseC.disabled = false;
   }
 }
@@ -46,13 +46,13 @@ document.body.appendChild(button);
 button.addEventListener("click", () => {
   count += 1;
   counter.innerHTML = count + " flan";
-  if (count >= 10) {
+  if (count >= A_cost) {
     purchaseA.disabled = false;
   }
-  if (count >= 100) {
+  if (count >= B_cost) {
     purchaseB.disabled = false;
   }
-  if (count >= 1000) {
+  if (count >= C_cost) {
     purchaseC.disabled = false;
   }
 });
