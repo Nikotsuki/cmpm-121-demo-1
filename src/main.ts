@@ -10,12 +10,49 @@ interface Item {
   cost: number;
   rate: number;
   bought: number;
+  description: string;
 }
 
 const availableItems: Item[] = [
-  { name: "TinyClicker", cost: 10, rate: 0.1, bought: 0 },
-  { name: "MamasHelp", cost: 100, rate: 2, bought: 0 },
-  { name: "TheSpanishInquisiton", cost: 1000, rate: 50, bought: 0 },
+  {
+    name: "TinyClicker",
+    cost: 10,
+    rate: 0.1,
+    bought: 0,
+    description: "A tiny, creepy finger that just wants to help out",
+  },
+  {
+    name: "MamasHelp",
+    cost: 100,
+    rate: 2,
+    bought: 0,
+    description:
+      "It's okay if you can't do it alone, there's no shame in a little help",
+  },
+  {
+    name: "TheSpanishInquisiton",
+    cost: 1000,
+    rate: 50,
+    bought: 0,
+    description:
+      "Nobody sees The Spanish Inquisition coming, unless you spcifically called for their help",
+  },
+  {
+    name: "TheFrenchRevolution",
+    cost: 3000,
+    rate: 200,
+    bought: 0,
+    description:
+      "Getting cross-cultural now, soon we'll have all of Europe killing kings to make flan",
+  },
+  {
+    name: "Carrefour",
+    cost: 90000,
+    rate: 1000,
+    bought: 0,
+    description:
+      "French supermarket, we will buy and we will sell until it is done",
+  },
 ];
 
 let count: number = 0;
