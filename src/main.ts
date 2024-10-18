@@ -15,6 +15,9 @@ let growth: number = 0;
 let A_count: number = 0;
 let B_count: number = 0;
 let C_count: number = 0;
+let A_cost: number = 10;
+let B_cost: number = 100;
+let C_cost: number = 1000;
 
 counter.innerHTML = count + " flan";
 
@@ -22,13 +25,13 @@ function increase() {
   count += growth;
   counter.innerHTML = count + " flan";
   growth_rate.innerHTML = " Growth Rate: " + growth;
-  if (count >= 10) {
+  if (count >= A_cost) {
     purchaseA.disabled = false;
   }
-  if (count >= 100) {
+  if (count >= B_cost) {
     purchaseB.disabled = false;
   }
-  if (count >= 1000) {
+  if (count >= C_cost) {
     purchaseC.disabled = false;
   }
 }
@@ -43,42 +46,45 @@ document.body.appendChild(button);
 button.addEventListener("click", () => {
   count += 1;
   counter.innerHTML = count + " flan";
-  if (count >= 10) {
+  if (count >= A_cost) {
     purchaseA.disabled = false;
   }
-  if (count >= 100) {
+  if (count >= B_cost) {
     purchaseB.disabled = false;
   }
-  if (count >= 1000) {
+  if (count >= C_cost) {
     purchaseC.disabled = false;
   }
 });
 
 purchaseA.addEventListener("click", () => {
   growth += 0.1;
-  count -= 10;
-  if (count < 10) {
+  count -= A_cost;
+  if (count < A_cost) {
     purchaseA.disabled = true;
   }
   A_count += 1;
+  A_cost = A_cost * 1.15;
   Acount.innerHTML = " Purchased A: " + A_count;
 });
 purchaseB.addEventListener("click", () => {
   growth += 2.0;
-  count -= 100;
-  if (count < 100) {
+  count -= B_cost;
+  if (count < B_cost) {
     purchaseB.disabled = true;
   }
   B_count += 1;
+  B_cost = B_cost * 1.15;
   Bcount.innerHTML = " Purchased B: " + B_count;
 });
 purchaseC.addEventListener("click", () => {
   growth += 5.0;
-  count -= 1000;
-  if (count < 1000) {
+  count -= C_cost;
+  if (count < C_cost) {
     purchaseC.disabled = true;
   }
   C_count += 1;
+  C_cost = C_cost * 1.15;
   Ccount.innerHTML = " Purchased C: " + C_count;
 });
 
