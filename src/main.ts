@@ -9,15 +9,6 @@ let growth: number = 0;
 
 counter.innerHTML = count + " flan";
 
-document.addEventListener("change", check_count);
-
-function check_count() {
-  if (count >= 10) {
-    console.log("hi");
-    purchase.disabled = false;
-  }
-}
-
 function increase() {
   count += growth;
   counter.innerHTML = count + " flan";
@@ -34,6 +25,9 @@ button.addEventListener("click", () => {
   count += 1;
   console.log("hi");
   counter.innerHTML = count + " flan";
+  if (count >= 10){
+    purchase.disabled = false;
+  }
 });
 
 purchase.addEventListener("click", () => {
