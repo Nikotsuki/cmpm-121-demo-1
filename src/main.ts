@@ -28,7 +28,7 @@ button.addEventListener("click", () => {
 
 while (count >= 10) {
   console.log("hi");
-  purchase.disabled = false;
+  purchase.disabled = true;
 }
 
 purchase.addEventListener("click", () => {
