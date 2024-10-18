@@ -51,7 +51,7 @@ for (const item of availableItems) {
     growth += item.rate;
     count -= item.cost;
     if (count < item.cost) {
-      document.getElementById(item.name)?.setAttribute("disabled", "disabled");
+      document.getElementById(item.name)?.setAttribute("disabled", "");
     }
     item.bought += 1;
     item.cost = item.cost * 1.15;
