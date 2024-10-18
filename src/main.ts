@@ -9,10 +9,11 @@ let growth: number = 0;
 
 counter.innerHTML = count + " flan";
 
-while (count >= 10) {
-  console.log("hi");
-  purchase.disabled = true;
-}
+document.addEventListener("change", function(){
+  if(count >= 10){
+    purchase.disabled = false;
+  }
+});
 
 function increase() {
   count += growth;
