@@ -2,10 +2,10 @@ import "./style.css";
 
 const app: HTMLDivElement = document.querySelector("#app")!;
 const counter: HTMLDivElement = document.querySelector("#counter")!;
-const Acount: HTMLDivElement = document.querySelector("#Acount!")!;
-const Bcount: HTMLDivElement = document.querySelector("#Bcount")!;
-const Ccount: HTMLDivElement = document.querySelector("#Ccount")!;
-const growth_rate: HTMLDivElement = document.querySelector("#Growth")!;
+const Acount: HTMLLabelElement = document.querySelector("#Acount!")!;
+const Bcount: HTMLLabelElement = document.querySelector("#Bcount")!;
+const Ccount: HTMLLabelElement = document.querySelector("#Ccount")!;
+const growth_rate: HTMLLabelElement = document.querySelector("#Growth")!;
 const purchaseA: HTMLButtonElement = document.querySelector("#purchaseA")!;
 const purchaseB: HTMLButtonElement = document.querySelector("#purchaseB")!;
 const purchaseC: HTMLButtonElement = document.querySelector("#purchaseC")!;
