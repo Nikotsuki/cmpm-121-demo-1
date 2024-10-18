@@ -2,7 +2,7 @@ import "./style.css";
 
 const app: HTMLDivElement = document.querySelector("#app")!;
 const counter: HTMLDivElement = document.querySelector("#counter")!;
-const Acount: HTMLLabelElement = document.querySelector("#Acount!")!;
+const Acount: HTMLLabelElement = document.querySelector("#Acount")!;
 const Bcount: HTMLLabelElement = document.querySelector("#Bcount")!;
 const Ccount: HTMLLabelElement = document.querySelector("#Ccount")!;
 const growth_rate: HTMLLabelElement = document.querySelector("#Growth")!;
@@ -21,7 +21,7 @@ counter.innerHTML = count + " flan";
 function increase() {
   count += growth;
   counter.innerHTML = count + " flan";
-  growth_rate.append("Growth Rate: " + growth);
+  growth_rate.innerHTML = "Growth Rate: " + growth;
   if (count >= 10) {
     purchaseA.disabled = false;
   }
@@ -62,7 +62,7 @@ purchaseA.addEventListener("click", () => {
     purchaseA.disabled = true;
   }
   A_count += 1;
-  Acount.append("Purchased A: " + A_count);
+  Acount.innerHTML = "Purchased A: " + A_count;
 });
 purchaseB.addEventListener("click", () => {
   growth += 2.0;
@@ -71,7 +71,7 @@ purchaseB.addEventListener("click", () => {
     purchaseB.disabled = true;
   }
   B_count += 1;
-  Bcount.append("Purchased B: " + B_count);
+  Bcount.innerHTML = "Purchased B: " + B_count;
 });
 purchaseC.addEventListener("click", () => {
   growth += 5.0;
@@ -80,7 +80,7 @@ purchaseC.addEventListener("click", () => {
     purchaseC.disabled = true;
   }
   C_count += 1;
-  Ccount.append("Purchased C: " + C_count);
+  Ccount.innerHTML = "Purchased C: " + C_count;
 });
 
 setInterval(increase, 1000);
