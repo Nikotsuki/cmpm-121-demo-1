@@ -11,8 +11,8 @@ counter.innerHTML = count + " flan";
 
 document.addEventListener("change", check_count);
 
-function check_count(){
-  if(count >= 10){
+function check_count() {
+  if (count >= 10) {
     purchase.disabled = false;
   }
 }
