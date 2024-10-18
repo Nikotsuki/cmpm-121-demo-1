@@ -6,6 +6,7 @@ const Acount: HTMLLabelElement = document.querySelector("#Acount")!;
 const Bcount: HTMLLabelElement = document.querySelector("#Bcount")!;
 const Ccount: HTMLLabelElement = document.querySelector("#Ccount")!;
 const growth_rate: HTMLLabelElement = document.querySelector("#Growth")!;
+const button: HTMLButtonElement = document.querySelector("#flan")!;
 const purchaseA: HTMLButtonElement = document.querySelector("#purchaseA")!;
 const purchaseB: HTMLButtonElement = document.querySelector("#purchaseB")!;
 const purchaseC: HTMLButtonElement = document.querySelector("#purchaseC")!;
@@ -36,12 +37,8 @@ function increase() {
   }
 }
 
-const gameName = "Flan Game";
+const gameName = "Flan Factory";
 document.title = gameName;
-
-const button = document.createElement("button");
-button.textContent = "🍮";
-document.body.appendChild(button);
 
 button.addEventListener("click", () => {
   count += 1;
