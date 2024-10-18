@@ -25,7 +25,7 @@ button.addEventListener("click", () => {
   count += 1;
   console.log("hi");
   counter.innerHTML = count + " flan";
-  if (count >= 10){
+  if (count >= 10) {
     purchase.disabled = false;
   }
 });
