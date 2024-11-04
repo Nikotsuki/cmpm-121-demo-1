@@ -60,12 +60,14 @@ let growth: number = 0;
 
 const gameName = "Flan Factory";
 document.title = gameName;
-counter.innerHTML = count + " flan";
 
 function increase() {
   count += growth;
-  counter.innerHTML = count + " flan";
+  updateCounter();
   growth_rate.innerHTML = " Growth Rate: " + growth;
+}
+
+function enableButtons(){
   for (const item of availableItems) {
     if (count >= item.cost) {
       document.getElementById(item.name)?.removeAttribute("disabled");
@@ -73,14 +75,14 @@ function increase() {
   }
 }
 
+function updateCounter(){
+  counter.innerHTML = count + " flan";
+}
+
 button.addEventListener("click", () => {
   count += 1;
-  counter.innerHTML = count + " flan";
-  for (const item of availableItems) {
-    if (count >= item.cost) {
-      document.getElementById(item.name)?.removeAttribute("disabled");
-    }
-  }
+  updateCounter();
+  enableButtons();
 });
 
 for (const item of availableItems) {
