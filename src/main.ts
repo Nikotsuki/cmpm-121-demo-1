@@ -67,7 +67,7 @@ function increase() {
   growth_rate.innerHTML = " Growth Rate: " + growth;
 }
 
-function enableButtons(){
+function enableButtons() {
   for (const item of availableItems) {
     if (count >= item.cost) {
       document.getElementById(item.name)?.removeAttribute("disabled");
@@ -75,7 +75,7 @@ function enableButtons(){
   }
 }
 
-function updateCounter(){
+function updateCounter() {
   counter.innerHTML = count + " flan";
 }
 
