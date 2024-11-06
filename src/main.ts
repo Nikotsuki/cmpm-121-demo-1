@@ -57,6 +57,8 @@ const availableItems: Item[] = [
 
 let count: number = 0;
 let growth: number = 0;
+const interval = 1000;
+const growthInterval = 1.15;
 
 const gameName = "Flan Factory";
 document.title = gameName;
@@ -93,13 +95,13 @@ for (const item of availableItems) {
       document.getElementById(item.name)?.setAttribute("disabled", "");
     }
     item.bought += 1;
-    item.cost = item.cost * 1.15;
+    item.cost = item.cost * growthInterval;
     document.getElementById(item.name + "_count")!.innerHTML =
       " Purchased " + item.name + ": " + item.bought;
   });
 }
 
-setInterval(increase, 1000);
+setInterval(increase, interval);
 
 const header = document.createElement("h1");
 header.innerHTML = gameName;
